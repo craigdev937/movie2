@@ -1,0 +1,36 @@
+:root {
+    --text-primary: hsl(100, 100%, 100%);
+    --text-secondary: hsl(213, 27%, 84%);
+    --accent-yellow: hsl(43, 96%, 56%);
+    --error-red: hsl(0, 84%, 60%);
+    --pink: hsl(345, 74%, 64%);
+    --text-muted: hsl(215, 20%, 65%);
+    --accent-cyan: hsl(188, 86%, 53%);
+    --accent-cyan-dark: hsl(189, 94%, 43%);
+    --shadow-cyan: rgba(34, 211, 238, 0.2);
+    --bg-overlay: rgba(15, 23, 42, 0.9);
+    --border-color: rgba(71, 85, 105, 0.5);
+    --bg-tertiary: hsl(215, 25%, 27%);
+    --bg-secondary: hsl(217, 33%, 17%);
+    --bg-primary: hsl(222, 47%, 11%);
+    --black: hsl(0, 0%, 0%);
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI";
+    min-height: 100vh;
+    color: var(--text-primary);
+    background: var(--text-muted);
+}
+
+
+
+
+
+
