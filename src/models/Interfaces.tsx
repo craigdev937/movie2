@@ -25,6 +25,7 @@ export interface IFDetail {
     revenue: number,
     runtime: number,
     backdrop_path: string,
+    poster_path: string,
     homepage: string,
     vote_average: number,
     vote_count: number,

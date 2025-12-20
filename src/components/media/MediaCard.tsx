@@ -17,7 +17,7 @@ export const MediaCard = ({
     voteAverage, releaseDate, 
 }: MC) => {
     const linkPath = type === "movie" ? 
-        `/film/${id}` : `/tv/${id}`;
+        `/films/${id}` : `/tv/${id}`;
     
     return (
         <Link 

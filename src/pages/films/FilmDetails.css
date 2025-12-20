@@ -1,0 +1,43 @@
+.back__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+}
+
+.details__hero {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+}
+
+.details__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        #0f172a,
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.7)
+    );
+}
+
+.details__content {
+    position: relative;
+    padding: 3rem 2rem;
+}
+
+.details__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+

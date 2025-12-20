@@ -77,7 +77,7 @@ export const Navbar = () => {
                     </menu>
                 </nav>
             </header>
-            <Outlet />
+            <Outlet />            
         </React.Fragment>
     );
 };
