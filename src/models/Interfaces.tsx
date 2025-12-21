@@ -33,7 +33,17 @@ export interface IFDetail {
     genres: [{
         id: number,
         name: string
-    }]
+    }],
+    credits: {
+        cast: [{
+            id: number,
+            name: string,
+            gender: number,
+            character: string,
+            popularity: number,
+            profile_path: string,
+        }]
+    }
 };
 
 

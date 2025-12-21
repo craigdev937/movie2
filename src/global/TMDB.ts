@@ -21,7 +21,10 @@ export const TMDB = createApi({
             query: (id) => ({
                 url: `/movie/${id}`,
                 method: "GET",
-                params: {"api_key": `${API}`}
+                params: {
+                    "api_key": `${API}`,
+                    "append_to_response": "credits"
+                }
             }),
             providesTags: ["Films"]
         }),

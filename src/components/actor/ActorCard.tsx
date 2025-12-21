@@ -1,3 +1,4 @@
+import "./ActorCard.css";
 import { Link } from "react-router";
 import { User } from "lucide-react";
 const IMG = "https://image.tmdb.org/t/p/w500";
