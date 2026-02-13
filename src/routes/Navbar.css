@@ -1,7 +1,12 @@
+header.navbar {
+    container-type: inline-size;
+    container-name: navbar;
+}
+
 .nav {
     display: flex;
     height: 90px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     background: var(--bg-overlay);
@@ -98,14 +103,14 @@
     transform: translateY(-15px) rotate(270deg);
 }
 
-/* SIDEBAR AND MEDIA QUERIES */
-@media (min-width: 750px) {
+/* SIDEBAR AND CONTAINER QUERIES */
+@container navbar (min-width: 750px) {
     .nav__button {
         display: none;
     }
 }
 
-@media (max-width: 750px) {
+@container navbar (max-width: 750px) {
     .nav {
         justify-content: flex-end;
     }

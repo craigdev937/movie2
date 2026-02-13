@@ -15,7 +15,7 @@ export const Navbar = () => {
 
     return (
         <React.Fragment>
-            <header>
+            <header className="navbar">
                 <nav className="nav">
                     <Link
                         to={"/"}
@@ -42,7 +42,7 @@ export const Navbar = () => {
                         </aside>
                     </button>
 
-                    {/* SIDEBAR AND MEDIA QUERIES */}
+                    {/* SIDEBAR AND CONTAINER QUERIES */}
                     <menu className={open ? 
                         "nav__menu active" : 
                         "nav__menu"
@@ -72,6 +72,15 @@ export const Navbar = () => {
                                 onClick={closeMenu}
                             >
                                 People
+                            </Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link
+                                to={"/favorites"}
+                                className="nav__links"
+                                onClick={closeMenu}
+                            >
+                                Favorites
                             </Link>
                         </li>
                     </menu>

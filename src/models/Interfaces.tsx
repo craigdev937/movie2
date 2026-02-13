@@ -46,7 +46,9 @@ export interface IFDetail {
     }
 };
 
-
+export interface IFav {
+    favorites: IFDetail[]
+};
 
 
 

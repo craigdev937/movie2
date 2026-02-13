@@ -19,10 +19,10 @@
 .spinner::after {
     content: "";
     position: absolute;
-    top: -40px;
-    left: -40px;
-    right: -40px;
-    bottom: -40px;
+    top: -80px;
+    left: -80px;
+    right: -80px;
+    bottom: -80px;
     border-radius: 50%;
     border-top: 12px solid rgba(255, 255, 255, .2);
     border-right: 12px solid rgba(255, 255, 255, .2);
