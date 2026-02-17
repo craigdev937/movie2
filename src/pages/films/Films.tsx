@@ -2,7 +2,7 @@ import React from "react";
 import "./Films.css";
 import { TMDB } from "../../global/TMDB";
 import { Spinner } from "../../components/spin/Spinner";
-import { MediaCard } from "../../components/media/MediaCard";
+import { FilmCard } from "../../components/media/FilmCard";
 
 export const Films = () => {
     const { error, isLoading, data } = TMDB.useTfilmQuery();
@@ -27,7 +27,7 @@ export const Films = () => {
             ) : (
                 <main className="film__grid">
                     {FILM && FILM.map((film) => (
-                        <MediaCard 
+                        <FilmCard 
                             key={film.id}
                             id={film.id}
                             type="movie"

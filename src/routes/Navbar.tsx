@@ -18,11 +18,11 @@ export const Navbar = () => {
             <header className="navbar">
                 <nav className="nav">
                     <Link
-                        to={"/"}
+                        to={"/films"}
                         className="nav__logo"
                         onClick={closeMenu}
                     >
-                        LOGO
+                        MEDIA
                     </Link>
 
                     {/* NAV MENU BUTTON */}

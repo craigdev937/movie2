@@ -16,7 +16,7 @@ export const ActorCard = ({
     return (
         <Link 
             className="actor"
-            to={`/actor/${id}`}
+            to={`/person/${id}`}
         >
             <section className="actor__img">
                 {profilePath ? (
