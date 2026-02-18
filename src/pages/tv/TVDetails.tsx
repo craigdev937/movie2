@@ -32,7 +32,7 @@ export const TVDetails = () => {
                 <Spinner />
             ) : (
                 <main>
-                    <Link to={"/tv"} className="back__link">
+                    <Link to={"/tv"} className="tv__back">
                         <ArrowLeft />
                         <span>Back to TV</span>
                     </Link>
@@ -62,7 +62,70 @@ export const TVDetails = () => {
                                 </section>
 
                                 <section className="tv__info">
+                                    <h1>{TV.name}</h1>
+                                    {TV.tagline && (
+                                        <p className="tv__tagline">{TV.tagline}</p>
+                                    )}
 
+                                    <aside className="tv__meta">
+                                        <div className="tv__badge">
+                                            <Star icon-yellow />
+                                            <span className="tv__value">
+                                                {TV.vote_average.toFixed(1)}
+                                            </span>
+                                            <span className="tv__suffix">/ 10</span>
+                                        </div>
+
+                                        <div className="tv__badge">
+                                            <Calendar icon-cyan />
+                                            <span>
+                                                {new Date(TV.first_air_date)
+                                                    .getFullYear()}
+                                            </span>
+                                        </div>
+
+                                        <div className="tv__badge">
+                                            <Tv icon-cyan />
+                                            <span>{TV.number_of_seasons} Seasons</span>
+                                        </div>
+
+                                        <div className="tv__badge">
+                                            <span>{TV.number_of_episodes} Episodes</span>
+                                        </div>
+
+                                        <div className="tv__genre">
+                                            {TV.genres.map((genre) => (
+                                                <span 
+                                                    className="tv__tag" 
+                                                    key={genre.id}
+                                                >
+                                                    {genre.name}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        <div className="tv__section">
+                                            <h2>Overview</h2>
+                                            <p>{TV.overview}</p>
+                                        </div>
+                                    </aside>
+
+                                    {TV.credits.cast.length > 0 && (
+                                        <section className="cast__section">
+                                            <h2>Cast</h2>
+                                            <aside className="cast__grid">
+                                                {TV.credits.cast.slice(0, 12).map((actor) => (
+                                                    <ActorCard 
+                                                        key={actor.id}
+                                                        id={actor.id}
+                                                        name={actor.name}
+                                                        profilePath={actor.profile_path}
+                                                        character={actor.character}
+                                                    />
+                                                ))}
+                                            </aside>
+                                        </section>
+                                    )}
                                 </section>
                             </aside>
                         </div>

@@ -1,7 +1,7 @@
 import { createApi, 
     fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IActor, ITV, IFilm, IFDetail, 
-    ITVDetails } from "../models/Interfaces";
+    ITVDetails, IAInfo } from "../models/Interfaces";
 const API = import.meta.env.PUBLIC_KEY;
 const URL = "https://api.themoviedb.org/3";
 
@@ -56,6 +56,14 @@ export const TMDB = createApi({
                     "api_key": `${API}`,
                     "append_to_response": "movie_credits,tv_credits"
                 }
+            }),
+            providesTags: ["People"]
+        }),
+        ainfo: builder.query<IAInfo, number>({
+            query: (id) => ({
+                url: `/person/${id}`,
+                method: "GET",
+                params: {"api_key": `${API}`}
             }),
             providesTags: ["People"]
         }),

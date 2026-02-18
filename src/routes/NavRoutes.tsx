@@ -8,6 +8,7 @@ import { FilmDetails } from "../pages/films/FilmDetails";
 import { TV } from "../pages/tv/TV";
 import { TVDetails } from "../pages/tv/TVDetails";
 import { People } from "../pages/people/People";
+import { Act } from "../components/actor/Act";
 import { Favorites } from "../pages/fav/Favorites";
 
 const RouteList = createBrowserRouter([
@@ -35,6 +36,10 @@ const RouteList = createBrowserRouter([
             {
                 path: "/people",
                 element: <People />
+            },
+            {
+                path: "/people/:id",
+                element: <Act />
             },
             {
                 path: "/favorites",

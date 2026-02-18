@@ -25,7 +25,7 @@ export const TV = () => {
             {isLoading ? (
                 <Spinner />
             ) : (
-                <main className="tv__grid">
+                <main className="grid__tv">
                     {TV && TV.map((tv) => (
                         <TVCard 
                             key={tv.id}

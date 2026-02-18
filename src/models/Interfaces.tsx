@@ -72,7 +72,26 @@ export interface ITVDetails {
     popularity: number,
     backdrop_path: string,
     poster_path: string,
-    
+    tagline: string,
+    vote_average: number,
+    first_air_date: string,
+    number_of_seasons: number,
+    number_of_episodes: number,
+    genres: [{
+        id: number,
+        name: string
+    }],
+    homepage: string,
+    credits: {
+        cast: [{
+            id: number,
+            name: string,
+            gender: number,
+            character: string,
+            popularity: number,
+            profile_path: string,
+        }]
+    }
 };
 
 export interface IFav {
@@ -97,7 +116,9 @@ export interface IActor {
             popularity: number,
             poster_path: string,
             title: string,
-            character: string
+            character: string,
+            vote_average: number,
+            release_date: string
         }]
     },
     tv_credits: {
@@ -105,10 +126,26 @@ export interface IActor {
             id: number,
             name: string,
             overview: string,
+            popularity: number,
             character: string,
-            poster_path: string
+            title: string,
+            poster_path: string,
+            vote_average: number,
+            release_date: string
         }]
     }
+};
+
+export interface IAInfo {
+    id: number,
+    name: string,
+    homepage: string,
+    biography: string,
+    birthday: string,
+    place_of_birth: string,
+    known_for_department: string,
+    popularity: number,
+    profile_path: string
 };
 
 

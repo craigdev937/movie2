@@ -26,7 +26,7 @@ body {
     font-family: "Segoe UI";
     min-height: 100vh;
     color: var(--text-primary);
-    background: var(--text-muted);
+    background: var(--black);
 }
 
 
