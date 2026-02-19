@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.tsx",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "rsbuild dev",
     "build": "rsbuild build",

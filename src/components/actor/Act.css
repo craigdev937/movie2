@@ -1,0 +1,15 @@
+.act__back {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-cyan);
+    gap: 0.5rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+}
+
+
+
+
+
+

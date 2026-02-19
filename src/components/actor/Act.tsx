@@ -11,7 +11,7 @@ const IMG = "https://image.tmdb.org/t/p/w500";
 export const Act = () => {
     const { id } = useParams();
     const AID = id !== undefined ? Number(id) : 0;
-    const [activeTab, setActiveTab] = React.useState<"films" | "tv">("films");
+    const [activeTab, setActiveTab] = React.useState<"movie" | "tv">("movie");
     const { error, isLoading, data } = TMDB.useActQuery(AID);
     const A = data!;
 
@@ -33,8 +33,8 @@ export const Act = () => {
             ) : (
                 <main>
                     <Link 
-                        to={"/tv"} 
-                        className="back-link"
+                        to={"/"} 
+                        className="act__back"
                     >
                         <ArrowLeft />
                         <span>Back</span>
@@ -95,9 +95,9 @@ export const Act = () => {
                     <article className="act__tabs">
                         <section className="tabs__cont">
                             <button
-                                className={activeTab === "films" 
+                                className={activeTab === "movie" 
                                     ? "tab__btn active" : "tab__btn"}
-                                onClick={() => setActiveTab("films")}
+                                onClick={() => setActiveTab("movie")}
                             >
                                 <Film />
                                 <span>Films ({A.movie_credits.cast.length})</span>
@@ -114,12 +114,12 @@ export const Act = () => {
                         </section>
                     </article>
 
-                    {/* {activeTab === "films" && A.movie_credits.cast.length > 0 && (
+                    {activeTab === "movie" && A.movie_credits.cast.length > 0 && (
                         <div className="film__sec">
                             <h2>Films</h2>
                             <section>
                                 {A.movie_credits.cast
-                                    .sort((a, b) => b.popularity - a.popularity)
+                                    .toSorted((a, b) => b.popularity - a.popularity)
                                     .slice(0, 20)
                                     .map((film) => (
                                         <FilmCard 
@@ -134,30 +134,30 @@ export const Act = () => {
                                     ))}
                             </section>
                         </div>
-                    )} */}
+                    )}
 
-                    {/* {activeTab === "tv" && A.tv_credits.cast.length > 0 && (
+                    {activeTab === "tv" && A.tv_credits.cast.length > 0 && (
                         <div className="film__sec">
                             <h2>TV Shows</h2>
                             <section>
                                 {A.tv_credits.cast
-                                    .sort((a, b) => b.popularity - a.popularity)
+                                    .toSorted((a, b) => b.popularity - a.popularity)
                                     .slice(0, 20)
                                     .map((tv) => (
-                                        <FilmCard 
+                                        <TVCard 
                                             type="tv"
                                             key={tv.id}
                                             id={tv.id}
                                             title={tv.title}
                                             posterPath={tv.poster_path}
                                             voteAverage={tv.vote_average}
-                                            releaseDate={tv.release_date}
+                                            first_air_date={tv.first_air_date}
                                         />
                                     ))
                                 }
                             </section>
                         </div>
-                    )} */}
+                    )}
                 </main>
             )}
         </React.Fragment>
