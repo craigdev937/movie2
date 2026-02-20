@@ -37,7 +37,7 @@ export const Act = () => {
                         className="act__back"
                     >
                         <ArrowLeft />
-                        <span>Back</span>
+                        <span>Home</span>
                     </Link>
 
                     <article className="act__card">
@@ -58,7 +58,6 @@ export const Act = () => {
 
                                 <aside className="act__info">
                                     <h1>{A.name}</h1>
-
                                     <div className="act__meta">
                                         {A.birthday &&  (
                                             <div className="act__badge">
@@ -83,8 +82,8 @@ export const Act = () => {
 
                                     {A.biography &&  (
                                         <div>
-                                            <h2>Biography</h2>
-                                            <p>{A.biography}</p>
+                                            <h2 className="act__title">Biography</h2>
+                                            <p className="act__bio">{A.biography}</p>
                                         </div>
                                     )}
                                 </aside>

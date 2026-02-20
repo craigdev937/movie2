@@ -8,6 +8,144 @@
     transition: color 0.3s;
 }
 
+.act__back:hover {
+    color: var(--accent-cyan-dark);
+}
+
+.act__card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+}
+
+.act__content {
+    padding: 3rem 2rem;
+}
+
+.act__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .act__grid {
+        flex-direction: row;
+    }
+}
+
+.act__poster {
+    flex-shrink: 0;
+}
+
+.act__poster img {
+    width: 256px;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.act__info {
+    flex: 1;
+}
+
+.act__info h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.act__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.act__badge {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    background: rgba(51, 65, 85, 0.5);
+}
+
+.act__dept {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--accent-cyan-dark);
+    background: rgba(34, 211, 238, 0.2);
+    border: 1px solid rgba(34, 211, 238, 0.5);
+}
+
+.act__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.act__bio {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    white-space: pre-line;
+    color: var(--text-secondary);
+}
+
+.act__tabs {
+    margin-bottom: 1.5rem;
+}
+
+.tabs__cont {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.tab__btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.tab__btn:not(.active) {
+    color: var(--text-secondary);
+}
+
+.tab__btn:not(.active):hover {
+    background: var(--bg-tertiary);
+}
+
+.tab__btn.active {
+    color: var(--text-primary);
+    background: var(--accent-cyan);
+    box-shadow: 0 10px 15px -3px var(--shadow-cyan);
+}
+
+.film__sec {
+    margin-bottom: 2rem;
+}
+
+.film__sec h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
 
 
 
