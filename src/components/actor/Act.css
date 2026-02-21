@@ -1,3 +1,12 @@
+.act {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    width: 100%;
+}
+
 .act__back {
     display: inline-flex;
     align-items: center;
@@ -146,7 +155,32 @@
     margin-bottom: 1.5rem;
 }
 
+.film__sec section {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(160px, 1fr)
+    );
+    gap: 1.5rem;
+    row-gap: 2.5rem;
+}
 
+.film__sec img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+    .film__sec section {
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(180px, 1fr)
+        );
+        gap: 2rem;
+    }
+}
 
 
 

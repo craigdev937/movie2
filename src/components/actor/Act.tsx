@@ -31,7 +31,7 @@ export const Act = () => {
             {isLoading ? (
                 <Spinner />
             ) : (
-                <main>
+                <main className="act">
                     <Link 
                         to={"/"} 
                         className="act__back"
@@ -108,7 +108,7 @@ export const Act = () => {
                                 onClick={() => setActiveTab("tv")}
                             >
                                 <Tv />
-                                <span>Films ({A.tv_credits.cast.length})</span>
+                                <span>TV Shows ({A.tv_credits.cast.length})</span>
                             </button>
                         </section>
                     </article>
