@@ -14,6 +14,10 @@
     --bg-secondary: hsl(217, 33%, 17%);
     --bg-primary: hsl(222, 47%, 11%);
     --black: hsl(0, 0%, 0%);
+
+    /* Using clamp for fluid spacing and sizing */
+    --padding-main: clamp(1rem, 5vw, 3rem);
+    --grid-gap: clamp(1rem, 3vw, 2rem);
 }
 
 *, *::before, *::after {

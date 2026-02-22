@@ -67,11 +67,11 @@ export const Navbar = () => {
                         </li>
                         <li className="nav__item">
                             <Link 
-                                to={"/people"}
+                                to={"/find"}
                                 className="nav__links"
                                 onClick={closeMenu}
                             >
-                                People
+                                Find
                             </Link>
                         </li>
                         <li className="nav__item">

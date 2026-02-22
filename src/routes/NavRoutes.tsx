@@ -7,7 +7,7 @@ import { Films } from "../pages/films/Films";
 import { FilmDetails } from "../pages/films/FilmDetails";
 import { TV } from "../pages/tv/TV";
 import { TVDetails } from "../pages/tv/TVDetails";
-import { People } from "../pages/people/People";
+import { Find } from "../pages/find/Find";
 import { Act } from "../components/actor/Act";
 import { Favorites } from "../pages/fav/Favorites";
 
@@ -34,8 +34,8 @@ const RouteList = createBrowserRouter([
                 element: <TVDetails />
             },
             {
-                path: "/people",
-                element: <People />
+                path: "/find",
+                element: <Find />
             },
             {
                 path: "/people/:id",

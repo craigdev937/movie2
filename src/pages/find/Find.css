@@ -1,0 +1,114 @@
+:is(input, button) {
+    font-family: inherit;
+}
+
+.find {
+    display: grid;
+    gap: var(--grid-gap);
+    padding: var(--padding-main);
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+/* 2. Form styling with :has() 
+   This highlights the whole row when the input is focused */
+.find__row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.find__row:has(input:focus) {
+    background: rgba(34, 211, 238, 0.1);
+}
+
+/* 3. The Grid and Container Query setup */
+.find__grid {
+    display: grid;
+    /* auto-fit makes the grid responsive without media queries */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--grid-gap);
+    list-style: none;
+    /* Define this as a container for children to query */
+    container-type: inline-size;
+}
+
+/* 4. The Card using Subgrid 
+   Subgrid ensures that titles and descriptions align across cards even if text length varies */
+.find__card {
+    display: grid;
+    /* Each card spans 2 rows in the grid's implicit logic if we wanted, 
+       but here we use it to align internal items */
+    grid-template-rows: auto 1fr; 
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s scale;
+}
+
+/* 5. Container Query: If the card is wide (e.g. on a large screen), 
+   switch to a horizontal layout */
+@container (min-width: 600px) {
+    .find__card {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .find__card img {
+        height: 100%; /* Fill the height in horizontal mode */
+    }
+}
+
+.find__card img {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Better than fixed height */
+    object-fit: cover;
+    background: var(--bg-primary);
+}
+
+.card__body {
+    display: grid;
+    /* Use subgrid if the parent was a direct grid, 
+       but here we use a flexible fractional layout */
+    grid-template-rows: auto 1fr auto; 
+    gap: 0.75rem;
+    padding: 1.25rem;
+}
+
+/* 6. Advanced Typography with clamp() */
+.card__body h3 {
+    font-size: clamp(1.1rem, 2vi, 1.4rem);
+    line-height: 1.2;
+}
+
+.card__body p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    /* Modern line clamping (standardized) */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 7. Logical styling with :has() 
+   Example: If the card has a "TV" span, give it a different accent */
+.find__card:has(span:is(:empty)) {
+    display: none; /* Hide cards with no data */
+}
+
+/* Smooth button scaling with calc() */
+.find__row button {
+    padding-inline: calc(1rem + 1vw);
+    background: var(--accent-cyan);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+

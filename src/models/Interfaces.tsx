@@ -136,16 +136,25 @@ export interface IActor {
     }
 };
 
-export interface IAInfo {
-    id: number,
-    name: string,
-    homepage: string,
-    biography: string,
-    birthday: string,
-    place_of_birth: string,
-    known_for_department: string,
-    popularity: number,
-    profile_path: string
+export interface IFind {
+    page: number,
+    total_pages: number,
+    total_results: number,
+    results: [{
+        id: number,
+        title: string,
+        name: string,
+        overview: string,
+        backdrop_path: string,
+        poster_path: string,
+        media_type: string,
+        genre_ids: number[],
+        popularity: number,
+        release_date: string,
+        first_air_date: string,
+        vote_average: number,
+        vote_count: number
+    }]
 };
 
 
