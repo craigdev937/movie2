@@ -1,19 +1,19 @@
 :root {
-    --text-primary: hsl(100, 100%, 100%);
-    --text-secondary: hsl(213, 27%, 84%);
-    --accent-yellow: hsl(43, 96%, 56%);
-    --error-red: hsl(0, 84%, 60%);
-    --pink: hsl(345, 74%, 64%);
-    --text-muted: hsl(215, 20%, 65%);
-    --accent-cyan: hsl(188, 86%, 53%);
-    --accent-cyan-dark: hsl(189, 94%, 43%);
+    --text-primary: oklch(100% 0.00011 271.152);
+    --text-secondary: oklch(86.898% 0.01994 252.99);
+    --accent-yellow: oklch(83.301% 0.16411 83.426);
+    --error-red: oklch(63.575% 0.20881 25.397);
+    --pink: oklch(66.623% 0.1706 7.464);
+    --text-muted: oklch(71.068% 0.0352 256.828);
+    --accent-cyan: oklch(79.692% 0.13433 211.512);
+    --accent-cyan-dark: oklch(71.532% 0.12618 215.896);
     --shadow-cyan: rgba(34, 211, 238, 0.2);
     --bg-overlay: rgba(15, 23, 42, 0.9);
     --border-color: rgba(71, 85, 105, 0.5);
-    --bg-tertiary: hsl(215, 25%, 27%);
-    --bg-secondary: hsl(217, 33%, 17%);
-    --bg-primary: hsl(222, 47%, 11%);
-    --black: hsl(0, 0%, 0%);
+    --bg-tertiary: oklch(37.547% 0.03911 257.31);
+    --bg-secondary: oklch(27.546% 0.03701 260.041);
+    --bg-primary: oklch(20.698% 0.03801 265.082);
+    --black: oklch(0% 0 0);
 
     /* Using clamp for fluid spacing and sizing */
     --padding-main: clamp(1rem, 5vw, 3rem);
